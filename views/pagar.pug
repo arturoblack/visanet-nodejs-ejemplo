@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Producto: #{product} S/. #{amount}
+
+  div
+    form(action='/visa/respuesta', method='post')
+      script(
+        src='https://static-content-qas.vnforapps.com/v2/js/checkout.js?qa=true',
+        data-sessiontoken = sessionKey,
+        data-channel = 'web',
+        data-merchantid = merchantId,
+        data-merchantlogo = domain + '/images/milogo.png',
+        data-formbuttoncolor = '#D80000',
+        data-purchasenumber = purchaseNumber,
+        data-amount = amount,
+        data-expirationminutes= '5',
+        data-buttonsize = 'MEDIUM',
+        data-buttoncolor = 'GRAY',
+        data-merchantname = 'Universidad Continental',
+        data-timeouturl = domain + '/visa/timeout')

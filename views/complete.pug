@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 Gracias por comprar el producto: #{product}
+  hr
+  table.table
+    thead
+      tr
+        th propiedad
+        th valor
+    tbody
+      - for (let key in payload)
+        tr
+          th= key
+          td
+            table.table
+              tbody
+                - for (let k in payload[key])
+                  tr
+                    th= k
+                    td= payload[key][k]
+
