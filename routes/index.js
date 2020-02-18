@@ -3,9 +3,9 @@ const router = express.Router();
 const {VisaNet} = require('@arturoblack/visanet');
 
 const visa = new VisaNet({
-  user: 'integraciones.visanet@necomplus.com',
-  password: 'd5e7nk$M',
-  merchantId: '522591303',
+  user: '---',
+  password: '---',
+  merchantId: '--',
   env: 'dev',
 });
 
